@@ -1,0 +1,278 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>CGPA to Percentage Calculator</title>
+    <link rel="stylesheet" href="styles.css">
+	<style>
+	:root {
+    --primary-color: #3498db;
+    --secondary-color: #2c3e50;
+    --background-color: #ecf0f1;
+    --text-color: #34495e;
+}
+
+* {
+    box-sizing: border-box;
+    margin: 0;
+    padding: 0;
+}
+
+body {
+    font-family: Arial, sans-serif;
+    line-height: 1.6;
+    color: var(--text-color);
+    background-color: var(--background-color);
+}
+
+header {
+    background-color: var(--primary-color);
+    color: white;
+    text-align: center;
+    padding: 1rem;
+}
+
+main {
+    max-width: 800px;
+    margin: 0 auto;
+    padding: 2rem;
+}
+
+.calculator {
+    background-color: white;
+    border-radius: 8px;
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+    padding: 2rem;
+    margin-bottom: 2rem;
+}
+
+.input-group {
+    margin-bottom: 1rem;
+}
+
+label {
+    display: block;
+    margin-bottom: 0.5rem;
+}
+
+input, select {
+    width: 100%;
+    padding: 0.5rem;
+    border: 1px solid #ccc;
+    border-radius: 4px;
+    font-size: 1rem;
+}
+
+button {
+    background-color: var(--primary-color);
+    color: white;
+    border: none;
+    padding: 0.75rem 1.5rem;
+    font-size: 1rem;
+    border-radius: 4px;
+    cursor: pointer;
+    transition: background-color 0.3s ease;
+}
+
+button:hover {
+    background-color: #2980b9;
+}
+
+.result {
+    margin-top: 1rem;
+    font-size: 1.2rem;
+    font-weight: bold;
+}
+
+.ad-space {
+    margin: 2rem 0;
+    text-align: center;
+}
+
+.blog-post {
+    background-color: white;
+    border-radius: 8px;
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+    padding: 2rem;
+    margin-bottom: 2rem;
+}
+
+h2, h3, h4 {
+    color: var(--secondary-color);
+    margin-bottom: 1rem;
+}
+
+h4 {
+    margin-top: 1rem;
+}
+
+p, ul {
+    margin-bottom: 1rem;
+}
+
+ul {
+    padding-left: 1.5rem;
+}
+
+pre {
+    background-color: #f7f7f7;
+    padding: 1rem;
+    border-radius: 4px;
+    overflow-x: auto;
+    margin-bottom: 1rem;
+}
+
+footer {
+    text-align: center;
+    padding: 1rem;
+    background-color: var(--secondary-color);
+    color: white;
+}
+
+@media (max-width: 600px) {
+    main {
+        padding: 1rem;
+    }
+
+    .calculator, .blog-post {
+        padding: 1rem;
+    }
+}
+
+
+	</style>
+</head>
+<body>
+    <header>
+        <h1>CGPA to Percentage Calculator</h1>
+    </header>
+    <main>
+        <div class="calculator">
+            <div class="input-group">
+                <label for="cgpa">Enter CGPA:</label>
+                <input type="number" id="cgpa" min="0" max="10" step="0.01" placeholder="Enter CGPA (0-10)">
+            </div>
+            <div class="input-group">
+                <label for="scale">CGPA Scale:</label>
+                <select id="scale">
+                    <option value="10">10-point scale</option>
+                    <option value="5">5-point scale</option>
+                    <option value="4">4-point scale</option>
+                </select>
+            </div>
+            <button id="calculate">Calculate</button>
+            <div id="result" class="result"></div>
+        </div>
+        <div class="ad-space">
+            <!-- Google Ads Code -->
+            <ins class="adsbygoogle"
+                 style="display:block"
+                 data-ad-client="ca-pub-XXXXXXXXXXXXXXXX"
+                 data-ad-slot="XXXXXXXXXX"
+                 data-ad-format="auto"
+                 data-full-width-responsive="true"></ins>
+            <script>
+                 (adsbygoogle = window.adsbygoogle || []).push({});
+            </script>
+        </div>
+    </main>
+    <article class="blog-post">
+        <h2>Understanding CGPA and Percentage Conversion</h2>
+        <p>Cumulative Grade Point Average (CGPA) and percentage are two different ways to represent academic performance. While CGPA is commonly used in many educational institutions, especially in higher education, percentage is still widely recognized and often required for job applications or further studies.</p>
+        <h3>Why Convert CGPA to Percentage?</h3>
+        <ul>
+            <li>Job Applications: Many employers ask for percentage scores.</li>
+            <li>Further Education: Some universities require percentage for admissions.</li>
+            <li>Standardization: It helps in comparing scores across different grading systems.</li>
+        </ul>
+        <h3>How the Conversion Works</h3>
+        <p>The conversion from CGPA to percentage is not standardized and can vary between institutions. However, commonly used formulas for different scales are:</p>
+        <h4>10-point scale:</h4>
+        <pre><code>Percentage = (CGPA - 0.75) * 10</code></pre>
+        <h4>5-point scale:</h4>
+        <pre><code>Percentage = CGPA * 20</code></pre>
+        <h4>4-point scale:</h4>
+        <pre><code>Percentage = (CGPA / 4) * 100</code></pre>
+        <p>It's important to note that these formulas are approximations and may not be accurate for all institutions. Always check with your specific institution for their conversion method.</p>
+        <h3>Understanding Different CGPA Scales</h3>
+        <p>Different educational systems use various CGPA scales:</p>
+        <ul>
+            <li><strong>10-point scale:</strong> Common in many Asian countries, including India.</li>
+            <li><strong>5-point scale:</strong> Used in some European and African countries.</li>
+            <li><strong>4-point scale:</strong> Widely used in the United States and Canada.</li>
+        </ul>
+        <p>When converting between scales or to percentages, it's crucial to know which scale your CGPA is based on to ensure accurate conversion.</p>
+    </article>
+    <footer>
+        <p>&copy; 2023 CGPA Calculator. All rights reserved.</p>
+    </footer>
+    <script src="script.js">
+	document.addEventListener('DOMContentLoaded', () => {
+    const cgpaInput = document.getElementById('cgpa');
+    const scaleSelect = document.getElementById('scale');
+    const calculateButton = document.getElementById('calculate');
+    const resultDiv = document.getElementById('result');
+
+    calculateButton.addEventListener('click', () => {
+        const cgpa = parseFloat(cgpaInput.value);
+        const scale = parseInt(scaleSelect.value);
+
+        if (isNaN(cgpa) || cgpa < 0 || cgpa > scale) {
+            resultDiv.textContent = `Please enter a valid CGPA between 0 and ${scale}.`;
+            resultDiv.style.color = 'red';
+            return;
+        }
+
+        let percentage;
+        if (scale === 10) {
+            percentage = (cgpa - 0.75) * 10;
+        } else if (scale === 5) {
+            percentage = cgpa * 20;
+        } else if (scale === 4) {
+            percentage = (cgpa / 4) * 100;
+        }
+
+        percentage = Math.min(Math.max(percentage, 0), 100);
+        
+        resultDiv.textContent = `Estimated Percentage: ${percentage.toFixed(2)}%`;
+        resultDiv.style.color = 'green';
+
+        // Animate the result
+        resultDiv.style.opacity = '0';
+        resultDiv.style.transform = 'translateY(-20px)';
+        setTimeout(() => {
+            resultDiv.style.transition = 'opacity 0.5s, transform 0.5s';
+            resultDiv.style.opacity = '1';
+            resultDiv.style.transform = 'translateY(0)';
+        }, 50);
+    });
+
+    // Add input validation
+    cgpaInput.addEventListener('input', () => {
+        const scale = parseInt(scaleSelect.value);
+        if (cgpaInput.value > scale) {
+            cgpaInput.value = scale;
+        }
+    });
+
+    // Add keyboard support
+    cgpaInput.addEventListener('keypress', (e) => {
+        if (e.key === 'Enter') {
+            calculateButton.click();
+        }
+    });
+
+    // Add scale change handler
+    scaleSelect.addEventListener('change', () => {
+        const scale = parseInt(scaleSelect.value);
+        cgpaInput.max = scale;
+        cgpaInput.placeholder = `Enter CGPA (0-${scale})`;
+    });
+});
+
+
+	</script>
+</body>
+</html>
+
